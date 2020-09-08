@@ -67,7 +67,7 @@ export default {
       postForm: {
         image_url: '',
         file_url: '',
-        media_url: 'http://lukehui.oss-cn-beijing.aliyuncs.com/web/upload/tmp/345e54a8-fa8e-4302-bb7f-968b44cadd87.flac?Expires=1572943113&OSSAccessKeyId=1XdMTdL70lbdl3IE&Signature=AarXgD4ml8VkKMPuzIdYxjsQijk%3D',
+        media_url: '',
         startTime: '1573660800000',
         endTime: '1573747200000'
       },

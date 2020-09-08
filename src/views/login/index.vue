@@ -91,7 +91,7 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['Login', 'Logout']),
+    ...mapActions(['Login']),
     showPwd () {
       this.passwordType === 'password'
         ? this.passwordType = ''
