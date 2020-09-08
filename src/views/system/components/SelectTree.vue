@@ -258,7 +258,7 @@
 
   .tree-select.single-select-tree {
     .el-tree-node.is-current > .el-tree-node__content > .el-tree-node__label {
-      color: #409eff;
+      color: #7096bb;
       font-weight: 700;
     }
   }

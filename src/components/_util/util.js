@@ -1,9 +1,4 @@
-/*
-* @Author: huanghanzhilian
-* @Date:   2019-12-04 15:52:26
-* @Last Modified by:   huanghanzhilian
-* @Last Modified time: 2019-12-04 15:52:37
-*/
+
 /**
  * 清理空值，对象
  * @param children

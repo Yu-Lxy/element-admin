@@ -1,9 +1,3 @@
-/*
-* @Author: macintoshhd
-* @Date:   2019-11-22 14:40:08
-* @Last Modified by:   huanghanzhilian
-* @Last Modified time: 2020-05-26 17:55:30
-*/
 import Vue from 'vue'
 import router from './router'
 import { Message } from 'element-ui'
