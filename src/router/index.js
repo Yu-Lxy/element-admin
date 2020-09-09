@@ -54,15 +54,15 @@ const constantRouterComponents = {
   RouterTabView: RouterTabView,
 
   // 需要动态引入的页面组件
-  // exampleTable: () => import('@/views/example/table/index'),
-  // exampleForm: () => import('@/views/example/form/index'),
+  exampleTable: () => import('@/views/example/table/index'),
+  exampleForm: () => import('@/views/example/form/index'),
   // testdemo: () => import('@/views/example/testdemo/index'),
    // account
   center: () => import('@/views/account/center'),
    // system
-  // roleList: () => import('@/views/system/roleList'),
-  // userList: () => import('@/views/system/userList'),
-  // permissionList: () => import('@/views/system/permissionList'),
+  roleList: () => import('@/views/system/roleList'),
+  userList: () => import('@/views/system/userList'),
+  permissionList: () => import('@/views/system/permissionList'),
 }
 
 export const generatorDynamicRouter = () => {
@@ -80,30 +80,6 @@ export const generatorDynamicRouter = () => {
 }
 
 export function buildmenu(rows) {
-  // const menus = [{
-  //     'title': '系统设置',
-  //     'key': 'system',
-  //     'component': 'PageView',
-  //     'redirect': '/system/roleList',
-  //     'icon': 'manage',
-  //     children: [{
-  //         'title': '角色管理',
-  //         'key': 'roleList',
-  //         'icon': ''
-  //       },
-  //       {
-  //         'title': '员工管理',
-  //         'key': 'userList',
-  //         'icon': ''
-  //       },
-  //       {
-  //         'title': '菜单管理',
-  //         'key': 'permissionList',
-  //         'icon': ''
-  //       }
-  //     ]
-  //   }
-  // ]
   const menus = [{
     'hidden': true,
     'title': '个人页',

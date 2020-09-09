@@ -82,6 +82,32 @@ export const getRoles = (parameter) => {
 }
 
 /**
+ * [获取表格数据]
+ * @return {[type]} [description]
+ */
+export const getTableData = (parameter) => {
+  return new Promise ((resolve, reject) => {
+    const res = {
+      data: {
+        currentPage: 1,
+        list: [{
+          date: '2016-05-02',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1518 弄'
+        },{
+          date: '2016-05-02',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1518 弄'
+        }],
+        totalElement: 10,
+        totalPage: 1
+      }
+    }
+    resolve(res)
+  })
+}
+
+/**
  * [获取所有权限]
  * @param  {[type]} parameter [description]
  * @return {[type]}           [description]
