@@ -4,6 +4,7 @@
       style="width: 500px;margin: 20px"
       :data="loadData"
       :columns="columns"
+      drag
       :pageSmall="true">
       <div slot="action" slot-scope="{row}">
         <el-button type="primary" size="small" @click="handleDetail(row)">删除</el-button>

@@ -91,13 +91,17 @@ export const getTableData = (parameter) => {
       data: {
         currentPage: 1,
         list: [{
-          date: '2016-05-02',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
+          id: '1',
+          date: '2020-05-02',
+          name: '王小虎'
         },{
+          id: '2',
           date: '2016-05-02',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
+          name: '王小二'
+        },{
+          id: '3',
+          date: '2019-05-02',
+          name: '哈哈哈'
         }],
         totalElement: 10,
         totalPage: 1

@@ -14,10 +14,10 @@ export default {
       pageStyle: { position: 'absolute', right: '0px', display: 'flex', alignItems: 'center', justifyContent: 'center' }
     }
   },
-  render (h) {
+  render () {
     return (
       <div>
-        { this.renderTable(h) }
+        { this.renderTable() }
         <div style={this.pageClass}>{ this.showPagination ? this.renderPage() : '' }</div>
       </div>
     )
@@ -31,23 +31,22 @@ export default {
     /**
      * renderTable
      */
-    renderTable (h) {
+    renderTable () {
       const props = {
         border: true,
         size: this.tableSize,
-        data: this.dataList,
-        rowClassName: this.rowClassName
+        data: this.dataList
       }
       return (
         <el-table ref="multipleTable" {...{ props }} v-loading={this.tableLoading} on-selection-change={this.changeFun} on-select-all={this.selectAll}>
-          {this.columns.map(item => this.renderTableColumn(h, item))}
+          {this.columns.map(item => this.renderTableColumn(item))}
         </el-table>
       )
     },
     /**
      * renderColumn
      */
-    renderTableColumn (h, item) {
+    renderTableColumn (item) {
       const props = {
         prop: item.desc,
         label: item.name,
@@ -78,7 +77,7 @@ export default {
       )
     },
     /**
-     * renderTable
+     * renderPage
      */
     renderPage () {
       const props = {
@@ -189,11 +188,12 @@ export default {
             dataTransfer.setData('Text', '')
           },
           onEnd: evt => {
-            const tempIndex = this.newList.splice(evt.oldIndex, 1)[0]
-            this.newList.splice(evt.newIndex, 0, tempIndex)
-            this.$emit('newSort', this.newList)
+            const tempIndex = this.newList.splice(evt.oldIndex, 1)[0] // 获取当前拖动选项的id
+            this.newList.splice(evt.newIndex, 0, tempIndex) // 在新列表里的新位置插入拖动选项的id
+            this.$emit('newSort', this.newList)  // 发送给父组件新列表
 
-            this.dataList.splice(evt.newIndex, 0, this.dataList.splice(evt.oldIndex, 1)[0])
+            // 拖动后需同步table内data数据
+            this.dataList.splice(evt.newIndex, 0, this.dataList.splice(evt.oldIndex, 1)[0]) // 在tableList的新位置插入拖动选项的数据
             let newArray = this.dataList.slice(0)
             this.dataList = []
             this.$nextTick(() => {
