@@ -1,9 +1,3 @@
----
-title: 后台管理系统element-admin——二次封装Table组件
-date: 2020-09-09 14:34:51
-tags: vue
-categories: vue
----
 
 ## Start
 项目中使用表格灰常的频繁👿，所以一个简洁的表格组件，既能让代码变得优雅还可以省去很多重复的操作。
@@ -53,7 +47,7 @@ element-ui已经为我们封装好了一层，这是element-ui的写法：
   }
 </script>
 ```
-![element-table](sTable/table1.png)
+![element-table](https://yu-lxy.github.io/2020/09/09/sTable/table1.png)
 
 虽然已经封装的很好了，但感觉还是不够简洁，并且还想将分页功能、loading功能、拖动功能都通过配置参数的方式来选择是否调用，所以进行了二次封装，看一下封装过后的调用代码：
 
@@ -94,7 +88,7 @@ export default {
 }
 </script>
 ```
-![s-table](sTable/table2.png)
+![s-table](https://yu-lxy.github.io/2020/09/09/sTable/table2.png)
 
 引入组件之后，table的数据由组件内部主动调用并返回，表格的每一列不再是 `el-table-column` 标签，而是由 `columns` 数组传递每一列信息，还包括了 `loading、pagination` 组件的逻辑，不用每次都处理同样的逻辑了。其中还包含了拖拽排序、选中操作等常用的功能。
 
