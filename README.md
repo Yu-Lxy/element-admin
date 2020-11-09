@@ -127,5 +127,5 @@ addEnable: checkPermission('system:role:add')
 登录权限相关的一些记录就是这样，希望能帮到一些有类似业务功能的小伙伴。
 占坑：table组件的二次封装，可以看[这里](https://github.com/Yu-Lxy/element-admin/tree/master/src/components/table)
 还有，后台长这样：
-!()[https://yu-lxy.github.io/2020/09/08/element-admin/login.png]
-!()[https://yu-lxy.github.io/2020/09/08/element-admin/home.png]
+![](https://yu-lxy.github.io/2020/09/08/element-admin/login.png)
+![](https://yu-lxy.github.io/2020/09/08/element-admin/home.png)
